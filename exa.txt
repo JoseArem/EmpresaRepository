@@ -1,0 +1,477 @@
+jenan@JoseRM MINGW64 ~
+$ cd c:
+
+jenan@JoseRM MINGW64 /c
+$ git clone https://github.com/JoseArem/EmpresaRepository.git
+Cloning into 'EmpresaRepository'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+jenan@JoseRM MINGW64 /c
+$ cd: EmpresaRepository
+bash: cd:: command not found
+
+jenan@JoseRM MINGW64 /c
+$ cd EmpresaRepository
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git branch produccion
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git branch ventas
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git branch recurso_humano
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git branch
+* main
+  produccion
+  recurso_humano
+  ventas
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        imagenproducto.txt
+        materiaprima.txt
+        productofinal.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git status
+On branch produccion
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git checkout main
+Switched to branch 'main'
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (ventas)
+$ git status
+On branch ventas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tiendas.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (ventas)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (ventas)
+$ git checkout main
+Switched to branch 'main'
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git merge produccion
+Already up to date.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (produccion)
+$ git checkout main
+Switched to branch 'main'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git merge produccion
+Already up to date.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin main
+Everything up-to-date
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin producciones
+error: src refspec producciones does not match any
+error: failed to push some refs to 'https://github.com/JoseArem/EmpresaRepository.git'
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin produccion
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/JoseArem/EmpresaRepository/pull/new/produccion
+remote:
+To https://github.com/JoseArem/EmpresaRepository.git
+ * [new branch]      produccion -> produccion
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin ventas
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting:
+remote:      https://github.com/JoseArem/EmpresaRepository/pull/new/ventas
+remote:
+To https://github.com/JoseArem/EmpresaRepository.git
+ * [new branch]      ventas -> ventas
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin recurso_humano
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'recurso_humano' on GitHub by visiting:
+remote:      https://github.com/JoseArem/EmpresaRepository/pull/new/recurso_humano
+remote:
+To https://github.com/JoseArem/EmpresaRepository.git
+ * [new branch]      recurso_humano -> recurso_humano
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git push origin recurso_humano
+Everything up-to-date
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push
+Everything up-to-date
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git diff empleados.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git log version1.0
+fatal: ambiguous argument 'version1.0': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git tag version1.0
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git tag
+version1.0
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git diff empleados.txt
+diff --git a/empleados.txt b/empleados.txt
+index dc0fa51..9e3a601 100644
+--- a/empleados.txt
++++ b/empleados.txt
+@@ -3,3 +3,8 @@ Viridiana palomar delgado
+ Dulce Espinoza Acosta
+ Ari Daniel Garcia Martinez
+ Aaron Aroch Ante Camacho
++Alexia Milagros Flores torres
++Ivanna Yoselet Garcia Coronado
++Juan Manuel Robles
++Edwin Gael Reynaldo Gutierrez
++Jair Alexis del Real
+\ No newline at end of file
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git checkout main
+Switched to branch 'main'
+A       empleados.txt
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+Your branch is up to date with 'origin/main'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git merge recurso_humano
+Already up to date.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   empleados.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git tag version1.1
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git mkdir fotos_empleados
+git: 'mkdir' is not a git command. See 'git --help'.
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ mkdir fotos_empleados
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tiendas.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fotos_empleados/
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   fotos_empleados/empleado1.jpg
+        new file:   fotos_empleados/empleado2.jpg
+        new file:   fotos_empleados/empleado3.jpg
+        new file:   fotos_empleados/empleado4.jpg
+        new file:   fotos_empleados/empleado5.jpg
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push
+Everything up-to-date
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git push origin main
+Everything up-to-date
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+A       empleados.txt
+A       fotos_empleados/empleado1.jpg
+A       fotos_empleados/empleado2.jpg
+A       fotos_empleados/empleado3.jpg
+A       fotos_empleados/empleado4.jpg
+A       fotos_empleados/empleado5.jpg
+A       imagenproducto.txt
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   fotos_empleados/empleado1.jpg
+        new file:   fotos_empleados/empleado2.jpg
+        new file:   fotos_empleados/empleado3.jpg
+        new file:   fotos_empleados/empleado4.jpg
+        new file:   fotos_empleados/empleado5.jpg
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sueldos.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+        new file:   fotos_empleados/empleado1.jpg
+        new file:   fotos_empleados/empleado2.jpg
+        new file:   fotos_empleados/empleado3.jpg
+        new file:   fotos_empleados/empleado4.jpg
+        new file:   fotos_empleados/empleado5.jpg
+        new file:   imagenproducto.txt
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   sueldos.txt
+        new file:   tiendas.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sueldos.txt
+
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$ git add .
+
+jenan@JoseRM MINGW64 /c/EmpresaRepository (recurso_humano)
+$
